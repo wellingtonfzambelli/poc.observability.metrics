@@ -1,0 +1,72 @@
+﻿version: '3'
+
+services:
+
+  # API
+  api:
+    image: ${DOCKER_REGISTRY-}pocobservability
+    container_name: api
+    ports:
+      - "8080:8080"
+    networks:
+      - observability-network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+
+  # PROMETHEUS
+  observability.prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml # don't forget to create the 'prometheus.yml'
+    networks:
+      - observability-network
+
+
+  # GRAFANA
+  observability.grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    depends_on:
+      - observability.prometheus
+      #- mysql
+    networks:
+      - observability-network
+
+
+  # MYSQL
+  observability.mysql:
+    image: mysql:8.0.39
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - observability-network
+
+volumes:
+  grafana-storage:
+  mysql-data:
+
+networks:
+  observability-network:
+    driver: bridge

@@ -1,3 +1,5 @@
+using Prometheus;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Prometheus
+//var counter = Metrics.CreateCounter("apiobservability", "Counts requests to the Poc.Observability.Api endpoints");
+//app.MapGet("/incrementar", () =>
+//{
+//    counter.Inc();  // Incrementing the count for each request
+//    return "Incremented count!";
+//});
+
+app.UseMetricServer(); // setup the middleware of Prometheus to expose the endpoint /metrics
+app.UseHttpMetrics();  // add metrics of request and response
 
 app.UseAuthorization();
 
