@@ -1,6 +1,12 @@
-using Prometheus;
+using OpenTelemetry.Metrics;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddOpenTelemetry()
+    .WithMetrics(builder =>
+    {
+        builder.AddPrometheusExporter();
+        builder.AddMeter("Microsoft.AspNetCore.Hosting", "Microsoft.AspNetCore.Server.Kestrel");
+    });
 
 // Add services to the container.
 
@@ -11,15 +17,14 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.MapPrometheusScrapingEndpoint();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseMetricServer(); // setup the middleware of Prometheus to expose the endpoint /metrics
-app.UseHttpMetrics();  // add metrics of request and response
 
 app.UseAuthorization();
 

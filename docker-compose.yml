@@ -24,11 +24,9 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml # don't forget to create the 'prometheus.yml'
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - observability-network
-    # extra_hosts:
-    #   host.docker.internal: 177.66.215.201
 
 
   # GRAFANA
@@ -44,30 +42,11 @@ services:
       - grafana-storage:/var/lib/grafana
     depends_on:
       - observability.prometheus
-      #- mysql
-    networks:
-      - observability-network
-
-
-  # MYSQL
-  observability.mysql:
-    image: mysql:8.0.39
-    container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydb
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    ports:
-      - "3309:3309"
-    volumes:
-      - mysql-data:/var/lib/mysql
     networks:
       - observability-network
 
 volumes:
   grafana-storage:
-  mysql-data:
 
 networks:
   observability-network:
