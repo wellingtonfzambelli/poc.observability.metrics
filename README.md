@@ -3,7 +3,12 @@ The project is a simple .Net 8 Rest Api monitored by Prometheus and shown with a
 I'm also working with docker and docker-compose to create the environment using containers.
 
 # Grafana dashboard
+![image](https://github.com/user-attachments/assets/93276fae-c1ca-455f-80c1-20a627db5f27)
+
 ![image](https://github.com/user-attachments/assets/7b44218b-40a2-406e-b89d-50f20d10443b)
+
+![image](https://github.com/user-attachments/assets/1e392728-d690-4c47-a6fc-6900d15b804c)
+
 
 # Prometheus
 ![image](https://github.com/user-attachments/assets/92643ac1-7d04-4631-8b2f-3fed3bb0fe47)
