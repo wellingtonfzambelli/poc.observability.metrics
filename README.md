@@ -13,6 +13,15 @@ I'm also working with docker and docker-compose to create the environment using 
 # Prometheus
 ![image](https://github.com/user-attachments/assets/92643ac1-7d04-4631-8b2f-3fed3bb0fe47)
 
+# Prometheus Alerts
+![image](https://github.com/user-attachments/assets/ef5e9a0c-ade3-45b6-abf0-20f43a3eb41b)
+
+Receiving e-mail alerts
+![image](https://github.com/user-attachments/assets/b2ae9121-1953-413f-9bf7-6f785cc01f40)
+
+![image](https://github.com/user-attachments/assets/37198296-5a4a-4984-91ac-2cf125a9d709)
+
+
 # Swagger
 ![image](https://github.com/user-attachments/assets/84fbfe70-8a37-4161-b51b-8db8873fa0b4)
 
