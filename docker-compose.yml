@@ -24,8 +24,8 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./alert-rules.yaml:/etc/prometheus/alert-rulers.rules
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/alert-rules.yaml:/etc/prometheus/alert-rulers.rules
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - observability-network
 
@@ -39,7 +39,7 @@ services:
     networks:
       - observability-network
     volumes:
-      - ./alert-manager.yaml:/prometheus/alert-manager.yaml
+      - ./prometheus/alert-manager.yaml:/prometheus/alert-manager.yaml
     command:
       - '--config.file=/prometheus/alert-manager.yaml'
     depends_on:
