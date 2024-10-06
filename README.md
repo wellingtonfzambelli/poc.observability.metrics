@@ -9,9 +9,6 @@ I'm also working with docker and docker-compose to create the environment using 
 
 ![image](https://github.com/user-attachments/assets/1e392728-d690-4c47-a6fc-6900d15b804c)
 
-# Creating a Grafana board for monitoring alerts from Prometheus
-![image](https://github.com/user-attachments/assets/1d6d3967-bea8-48fc-9d9c-162789830f16)
-
 
 
 # Prometheus
@@ -28,6 +25,8 @@ Receiving e-mail alerts
 # Alert Manager
 ![image](https://github.com/user-attachments/assets/59fbfa70-e2cb-48ef-ac42-a3e95fbdbebe)
 
+# Creating a Grafana board for monitoring alerts from Prometheus
+![image](https://github.com/user-attachments/assets/1d6d3967-bea8-48fc-9d9c-162789830f16)
 
 # Swagger
 ![image](https://github.com/user-attachments/assets/84fbfe70-8a37-4161-b51b-8db8873fa0b4)
