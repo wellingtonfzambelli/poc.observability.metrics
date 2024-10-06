@@ -41,9 +41,16 @@ Receiving e-mail alerts
 ![image](https://github.com/user-attachments/assets/0d436e77-d584-4b38-93af-a08f4c9436e5)
 
 # docker-compose.yml
-![image](https://github.com/user-attachments/assets/af8a8567-2176-4e38-ae00-fc8c7ae7f91b)
+![image](https://github.com/user-attachments/assets/f2dbe83d-864e-434b-a6c7-85eba6de6339)
 
 # prometheus.yml
 ![image](https://github.com/user-attachments/assets/03704000-c3e4-4595-b910-e732ac355207)
+
+# alert-manager.yaml
+![image](https://github.com/user-attachments/assets/7a05ed91-ad1b-433f-a5c5-bb92483da0e9)
+
+# alert-rules.yaml
+![image](https://github.com/user-attachments/assets/f33037b4-1afa-4d62-830f-61af3820969f)
+
 
 
