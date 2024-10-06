@@ -9,6 +9,10 @@ I'm also working with docker and docker-compose to create the environment using 
 
 ![image](https://github.com/user-attachments/assets/1e392728-d690-4c47-a6fc-6900d15b804c)
 
+# Creating a Grafana board for monitoring alerts from Prometheus
+![image](https://github.com/user-attachments/assets/1d6d3967-bea8-48fc-9d9c-162789830f16)
+
+
 
 # Prometheus
 ![image](https://github.com/user-attachments/assets/92643ac1-7d04-4631-8b2f-3fed3bb0fe47)
