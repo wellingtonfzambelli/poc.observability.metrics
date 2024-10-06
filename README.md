@@ -21,6 +21,8 @@ Receiving e-mail alerts
 
 ![image](https://github.com/user-attachments/assets/37198296-5a4a-4984-91ac-2cf125a9d709)
 
+![image](https://github.com/user-attachments/assets/59fbfa70-e2cb-48ef-ac42-a3e95fbdbebe)
+
 
 # Swagger
 ![image](https://github.com/user-attachments/assets/84fbfe70-8a37-4161-b51b-8db8873fa0b4)
