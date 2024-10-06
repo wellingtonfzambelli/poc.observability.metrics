@@ -1,0 +1,46 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  receiver: 'Default'
+  group_by: ['alertname']
+  group_wait: 15s
+  group_interval: 15s
+  repeat_interval: 1m
+
+  routes:
+    - receiver: ApiObservabilityAlert
+      match:
+        team: Developers
+
+    - receiver: CpuUsageAlert
+      match:
+        team: Infra
+
+receivers:
+  - name: 'Default'
+    email_configs:
+      - to: 'wellington.m.fernandes@gmail.com'
+        from: 'hello@demomailtrap.com'
+        smarthost: 'live.smtp.mailtrap.io:587'
+        auth_username: 'api'
+        auth_password: 'd1a8d2693c07c1d91ec2c260a797bd1f'
+        require_tls: true
+
+  - name: 'ApiObservabilityAlert'
+    email_configs:
+      - to: 'wellington.m.fernandes@gmail.com'
+        from: 'hello@demomailtrap.com'
+        smarthost: 'live.smtp.mailtrap.io:587'
+        auth_username: 'api'
+        auth_password: 'd1a8d2693c07c1d91ec2c260a797bd1f'
+        require_tls: true
+
+  - name: 'CpuUsageAlert'
+    email_configs:
+      - to: 'wellington.m.fernandes@gmail.com'
+        from: 'hello@demomailtrap.com'
+        smarthost: 'live.smtp.mailtrap.io:587'
+        auth_username: 'api'
+        auth_password: 'd1a8d2693c07c1d91ec2c260a797bd1f'
+        require_tls: true

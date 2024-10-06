@@ -2,6 +2,9 @@
   scrape_interval: 15s
   scrape_timeout: "10s"
 
+
+
+# METRICS
 scrape_configs:
 
   - job_name: 'api.observability'
@@ -12,4 +15,16 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
+  
+
+# ALERTS
+rule_files:
+  - alert-rulers.rules
+
+alerting:
+  alertmanagers:
+    - scheme: http
+      static_configs:
+        - targets:
+          - "observability.alertmanager:9093"
   

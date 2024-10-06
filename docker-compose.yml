@@ -24,9 +24,26 @@ services:
     ports:
       - "9090:9090"
     volumes:
+      - ./alert-rules.yaml:/etc/prometheus/alert-rulers.rules
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - observability-network
+
+
+  # ALERT MANAGER
+  observability.alertmanager:
+    image: prom/alertmanager
+    container_name: alertmanager
+    ports:
+      - "9093:9093"
+    networks:
+      - observability-network
+    volumes:
+      - ./alert-manager.yaml:/prometheus/alert-manager.yaml
+    command:
+      - '--config.file=/prometheus/alert-manager.yaml'
+    depends_on:
+      - observability.prometheus
 
 
   # GRAFANA
