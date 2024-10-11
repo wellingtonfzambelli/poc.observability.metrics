@@ -62,6 +62,48 @@ services:
     networks:
       - observability-network
 
+
+  # MYSQL SERVER
+  observability.mysql:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: "classicmodels"
+      MYSQL_USER: "myuser"
+      MYSQL_ROOT_PASSWORD: "123"
+      MYSQL_PASSWORD: "123"
+    ports:
+      - "3316:3316"
+    volumes:
+      - ./mysql-script/volume-mysql:/var/lib/mysql
+      - ./mysql-script/initial_script.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - observability-network
+
+
+  # MYSQL EXPORTER
+  # mysqld-exporter:
+  #   image: prom/mysqld-exporter
+  #   environment:
+  #     DATA_SOURCE_NAME: "myuser:123@(mysql:3316)/classicmodels"
+  #   ports:
+  #     - "9104:9104"
+
+
+  # ADMINER
+  observability.adminer:
+    image: adminer
+    ports:
+      - 8081:8080
+    networks:
+      - observability-network
+   
+    # Admire Auth
+    # Server: "observability.mysql"
+    # Username: "myuser"
+    # Password: "123"
+    # Database: "classicmodels"
+
 volumes:
   grafana-storage:
 
