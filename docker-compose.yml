@@ -81,15 +81,6 @@ services:
       - observability-network
 
 
-  # MYSQL EXPORTER
-  # mysqld-exporter:
-  #   image: prom/mysqld-exporter
-  #   environment:
-  #     DATA_SOURCE_NAME: "myuser:123@(mysql:3316)/classicmodels"
-  #   ports:
-  #     - "9104:9104"
-
-
   # ADMINER
   observability.adminer:
     image: adminer
