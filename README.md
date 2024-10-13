@@ -3,11 +3,15 @@ The project is a simple .Net 8 Rest Api monitored by Prometheus and shown with a
 I'm also working with docker and docker-compose to create the environment using containers.
 
 # Grafana dashboard
-![image](https://github.com/user-attachments/assets/93276fae-c1ca-455f-80c1-20a627db5f27)
+![image](https://github.com/user-attachments/assets/8f7fc84e-eff3-43da-93ab-b4c180812a72)
 
 ![image](https://github.com/user-attachments/assets/7b44218b-40a2-406e-b89d-50f20d10443b)
 
 ![image](https://github.com/user-attachments/assets/1e392728-d690-4c47-a6fc-6900d15b804c)
+
+From Mysql database as datasource
+![image](https://github.com/user-attachments/assets/da7c6175-e36b-40b1-ad3e-7de78cbc4f22)
+
 
 
 
