@@ -7,7 +7,6 @@ This architecture not only allows for efficient monitoring but also provides ins
 
 # Stacks of this project
 - .NET 8
-- Visual Studio 2022
 - Swagger
 - Grafana
 - Prometheus
@@ -15,6 +14,7 @@ This architecture not only allows for efficient monitoring but also provides ins
 - MySQL
 - Open Telemetry
 - Docker _(Docker Compose)_
+- Visual Studio 2022
 
 # Grafana dashboard
 ![image](https://github.com/user-attachments/assets/8f7fc84e-eff3-43da-93ab-b4c180812a72)
