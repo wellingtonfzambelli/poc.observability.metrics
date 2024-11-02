@@ -1,6 +1,16 @@
-# poc.observability
+# About
 The project is a simple .Net 8 Rest Api monitored by Prometheus and shown with a dashboard in Grafana.
 I'm also working with docker and docker-compose to create the environment using containers.
+
+# Stacks of this project
+- .NET 8
+- Swagger
+- Grafana
+- Prometheus
+- Alert Manager
+- MySQL
+- Open Telemetry
+- Docker _(Docker Compose)_
 
 # Grafana dashboard
 ![image](https://github.com/user-attachments/assets/8f7fc84e-eff3-43da-93ab-b4c180812a72)
