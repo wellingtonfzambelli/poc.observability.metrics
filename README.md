@@ -1,6 +1,9 @@
 # About
-The project is a simple .Net 8 Rest Api monitored by Prometheus and shown with a dashboard in Grafana.
-I'm also working with docker and docker-compose to create the environment using containers.
+This project showcases a straightforward .NET 8 REST API, which is monitored by Prometheus and visualized through a Grafana dashboard. 
+
+The setup leverages Docker and Docker Compose to create a containerized environment, ensuring easy deployment and management. 
+
+This architecture not only allows for efficient monitoring but also provides insights into the API's performance and health.
 
 # Stacks of this project
 - .NET 8
