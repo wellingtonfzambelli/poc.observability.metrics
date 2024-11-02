@@ -7,6 +7,7 @@ This architecture not only allows for efficient monitoring but also provides ins
 
 # Stacks of this project
 - .NET 8
+- Visual Studio 2022
 - Swagger
 - Grafana
 - Prometheus
