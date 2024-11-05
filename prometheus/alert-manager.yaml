@@ -24,7 +24,7 @@ receivers:
         from: 'hello@demomailtrap.com'
         smarthost: 'live.smtp.mailtrap.io:587'
         auth_username: 'api'
-        auth_password: 'd1a8d2693c07c1d91ec2c260a797bd1f'
+        auth_password: ''
         require_tls: true
 
   - name: 'ApiObservabilityAlert'
@@ -33,7 +33,7 @@ receivers:
         from: 'hello@demomailtrap.com'
         smarthost: 'live.smtp.mailtrap.io:587'
         auth_username: 'api'
-        auth_password: 'd1a8d2693c07c1d91ec2c260a797bd1f'
+        auth_password: ''
         require_tls: true
 
   - name: 'CpuUsageAlert'
@@ -42,5 +42,5 @@ receivers:
         from: 'hello@demomailtrap.com'
         smarthost: 'live.smtp.mailtrap.io:587'
         auth_username: 'api'
-        auth_password: 'd1a8d2693c07c1d91ec2c260a797bd1f'
+        auth_password: ''
         require_tls: true
